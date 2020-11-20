@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width : 600px){
+  .navBar{
+  background-color: #231F20;
+  margin-top: 1px;
+}
+
+.navBar ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  color: #BB4430;
+  padding : 1rem;
+  font-size: 1.4rem;
+}
+
+.container{
+  display: flex;
+  height: 90vh;
+}
+
+.leftContainer{
+  padding : 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 30vw;
+  background: url('./Stock/weather6.jpg');
+  /* background-size: cover; */
+}
+
+.rightContainer{
+  padding : 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 70vw;
+  background: url('./Stock/weather5.png');
+}
+
+.inputFormStyle{
+  display: flex;
+  flex-direction: column;
+  width:  80%;
+  font-size: 1.4rem;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: #231F20;
+  border-radius: 5px;
+}
+
+.inputFormStyle input{
+  margin-bottom: 5px;
+  line-height: 1.2rem;
+  border-radius: 2px;
+}
+
+.inputFormStyle button{
+  background-color: limegreen;
+  border-radius: 2px;
+}
+
+.weatherInfoStyle{
+  width: 60%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.weatherInfoStyle h3{
+  margin-bottom: 5px;
+}
+
+.weatherInfoStyle div{
+  line-height: 1.6rem;
+  font-weight: bold;
+}}
+
+@media (max-width : 600px){
+  .navBar{
+    background-color: #231F20;
+    margin-top: 1px;
+  }
+  
+  .navBar ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    color: #BB4430;
+    padding : 1rem;
+    font-size: 1.4rem;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .leftContainer{
+    height: 40vh;
+    padding : 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./Stock/weather6.jpg');
+  }
+  
+  .rightContainer{
+    height : 52vh;
+    padding : 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./Stock/weather5.png');
+  }
+  .inputFormStyle{
+    display: flex;
+    flex-direction: column;
+    width:  80%;
+    font-size: 1.4rem;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #231F20;
+    border-radius: 5px;
+  }
+  
+  .inputFormStyle input{
+    margin-bottom: 5px;
+    line-height: 1.2rem;
+    border-radius: 2px;
+  }
+  
+  .inputFormStyle button{
+    background-color: limegreen;
+    border-radius: 2px;
+  }
+  
+  .weatherInfoStyle{
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .weatherInfoStyle h3{
+    margin-bottom: 5px;
+  }
+  
+  .weatherInfoStyle div{
+    line-height: 1.6rem;
+    font-weight: bold;
+  }
+}
