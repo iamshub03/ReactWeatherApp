@@ -8,6 +8,7 @@ class App extends Component {
 
   state = {
     events : [],
+    active : false
   };
   async componentDidMount(){
     
@@ -27,7 +28,8 @@ class App extends Component {
           value.current.feelslike_c,
           value.current.temp_f,
           value.current.condition.text
-        ]})
+        ],
+      active : true})
       }
     }
     catch(err){
@@ -50,16 +52,20 @@ class App extends Component {
     }
   }
   
+  resetClickHandler = () => {
+    document.getElementById('inputField').value = "";
+    this.setState({events : [], active : false})
+  }
   render() {
     return (
     <div>
       <Navbar/>
       <div className="container">
         <div className="leftContainer">
-        <Inputform search={this.searchClickHandler} enter={this.enterClickHandler}/>
+        <Inputform search={this.searchClickHandler} enter={this.enterClickHandler} reset={this.resetClickHandler}/>
         </div>
         <div className="rightContainer">
-        <Weatherinfo 
+        {this.state.active?<Weatherinfo 
         location={this.state.events[0]}
         state = {this.state.events[1]}
         country = {this.state.events[2]}
@@ -68,7 +74,7 @@ class App extends Component {
         feelslike = {this.state.events[5]}
         temp = {this.state.events[6]}
         condition = {this.state.events[7]}
-        />
+        />: <div></div>}
         </div>
       </div>
     </div>

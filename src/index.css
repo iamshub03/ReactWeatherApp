@@ -42,6 +42,7 @@
   align-items: center;
   flex-basis: 70vw;
   background: url('./Stock/weather5.png');
+  
 }
 
 .inputFormStyle{
@@ -67,10 +68,19 @@
 }
 
 .weatherInfoStyle{
-  width: 60%;
+  width: 20%;
   background-color: white;
   padding: 20px;
   border-radius: 5px;
+  animation-name : animate1;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate1{
+  to{
+    width: 60%;
+  }
 }
 
 .weatherInfoStyle h3{
@@ -80,7 +90,16 @@
 .weatherInfoStyle div{
   line-height: 1.6rem;
   font-weight: bold;
-}}
+}
+
+#search{
+  margin-bottom: 5px;
+}
+
+#reset{
+  background-color: crimson;
+}
+}
 
 @media (max-width : 600px){
   .navBar{
@@ -140,10 +159,19 @@
   }
   
   .weatherInfoStyle{
-    width: 80%;
+    width: 50%;
     background-color: white;
     padding: 20px;
     border-radius: 5px;
+    animation-name : animate1;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes animate1{
+    to{
+      width: 80%;
+    }
   }
   
   .weatherInfoStyle h3{
@@ -153,5 +181,13 @@
   .weatherInfoStyle div{
     line-height: 1.6rem;
     font-weight: bold;
+  }
+
+  #search{
+    margin-bottom: 5px;
+  }
+  
+  #reset{
+    background-color: crimson;
   }
 }
