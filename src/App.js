@@ -65,6 +65,10 @@ class App extends Component {
         <Inputform search={this.searchClickHandler} enter={this.enterClickHandler} reset={this.resetClickHandler}/>
         </div>
         <div className="rightContainer">
+          {this.state.active === false?
+          <div className="template">
+          <h3>Enter a City name to get it's weather details here.</h3>
+          </div>:<span></span>}
         {this.state.active?<Weatherinfo 
         location={this.state.events[0]}
         state = {this.state.events[1]}
